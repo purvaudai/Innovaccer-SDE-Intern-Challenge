@@ -23,7 +23,7 @@ To register your number in the given account, or any other account:
 Go to [Twilio](https://www.twilio.com/).
 Login with Email[purvaudai99@gmail.com], password[TingooPingoo123].
 Now go visit [here](https://www.twilio.com/console/phone-numbers/verified) and add Host Phone No.
-I
+
 ## Accounts Already Present in Database:
 ### Admins:
 1. Username: admin <br>
@@ -91,6 +91,15 @@ Enter user password, if prompted. (Since I do not know your docker configuration
  2. View Log
 
  <img src = "https://raw.githubusercontent.com/purvaudai/Innovaccer-SDE-Intern-Challenge/master/PicturesForREADME/10.png" width="500px">
+
+ ### To stopp server
+ 1. If using non-dockerized version, just use Ctrl+C
+ 2. Else,
+ ```bash
+docker-compose down
+```
+
+
 
 # Future Improvements
 1. If server hardware is know, deply to Kubernetes.
