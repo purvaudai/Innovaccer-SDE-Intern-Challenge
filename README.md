@@ -1,4 +1,5 @@
-# Entry Management Web App - Innovaccer SDE Intern Challenge
+# Entry Management Web App - 
+# Innovaccer SDE Intern Challenge
 
 Submission for Innovaccer Summer Internship 2020.
 
@@ -33,6 +34,7 @@ Now go visit [here](https://www.twilio.com/console/phone-numbers/verified) and a
 1. Username: purvaudai <br>
    Password: welcomep<br>
    Email: purvaudai99@gmail.com
+   
 2. Username: namant <br>
    Password: welcomen <br>
    Email: 17uec077@lnmiit.ac.in
@@ -102,6 +104,6 @@ docker-compose down
 
 
 # Future Improvements
-1. If server hardware is know, deply to Kubernetes.
+1. If server hardware is know, deploy to Kubernetes.
 2. Improve FrontEnd.
 3. Improve Error Handling
