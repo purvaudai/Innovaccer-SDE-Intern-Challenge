@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Host Visitor Log{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1 class='display-4'>Hi {{ user.first_name }} {{user.last_name}}!</h1>
+    <div class="centerloginbox">
+      <table class="ui celled table">
+        <thead>
+          <tr><th>Visitor</th>
+          <th>Email</th>
+          <th>Phone No.</th>
+          <th>Check-In Time</th>
+          <th>Check-Out Time</th>
+        </tr></thead>
+        <tbody>
+        {% for visit in allvisits %}
+        <tr>
+        <td>{{ visit.visitor.name }}</td>
+        <td>
+        {{ visit.visitor.email }}</td>
+        <td>
+          {{ visit.visitor.phone }}</td>
+        <td>
+          {{ visit.timein }}</td>
+        <td>
+          {{ visit.timeout }}</td>
+        </tr>
+        {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+      <div class=text-center><p><a href="{% url 'logout' %}" class="btn btn-dark" role="button" aria-pressed="true">logout</a></p></div>
+      </div>
+      <div class="text-center">
+          <a href="{% url 'home' %}" class="btn btn-dark" role="button" aria-pressed="true">Home</a>
+        </div>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Entry Management{% endblock %}</title>
+</head>
+<style>
+    h1{
+      color: white;
+    }
+    .date{
+      color: white;
+    }
+    form{
+      background-color: white;
+      opacity: 0.8;
+      padding: 30px;
+      width: fit-content;
+      border-radius: 7%;
+    }
+  
+    .centerloginbox{
+      background-color: white;
+      opacity: 0.8;
+    padding: 30px;
+    width: fit-content;
+    border-radius: 7%;
+      position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+
+    
+    body{
+      background-image: url('https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    }
+  </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+  <div class="container-fluid text-center">
+    {% block content %}
+    {% endblock %}
+  </div>
+  </body>
+</html>

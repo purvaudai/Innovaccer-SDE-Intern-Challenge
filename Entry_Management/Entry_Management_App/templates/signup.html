@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Host Registration</title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+<body>
+
+
+<div class="card-container">
+<div class="ui card ">
+  <div class="content">
+    <a class="header">Welcome</a>
+    <div class="meta">
+      <span class="date">Please enter your details</span>
+    </div>
+    <br>
+    <!-- <div class="description">
+      Kristy is an art director living in New York.
+    </div> -->
+
+    
+
+  <form action={% url 'register' %} method="POST">
+    <div>
+      {%csrf_token%}
+      <label class="label">First Name</label>
+      <input type="text" name="first_name" required>
+      <br>
+      <label class="label">Last Name</label>
+      <input type="text" name="last_name" required>
+      <br>
+      <label class="label">Email</label>
+      <input type="Email" name="email" required>
+      <br>
+      <label class="label">Phone</label>
+      <input type="text" name="phone" required>
+      <br>
+      <label class="label">Address</label>
+      <input type="text" name="address" required>
+      <br>
+      <label>Password</label>
+      <input type="Password" name="password1">
+      <br>
+      <label>Repeat Password:</label>
+      <input type="Password" name="password2">
+    </div>
+  
+    <div>
+      <button type="Submit" class="ui black button">Register</button>
+    </div>
+    </form>
+
+    <div>
+    {% for mes in messages %}
+    {{mes}}
+    {% endfor %}
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

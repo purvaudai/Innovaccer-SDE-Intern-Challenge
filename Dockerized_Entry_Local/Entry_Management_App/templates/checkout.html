@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visitor Check Out</title>
+</head>
+<style>
+  h1{
+    color: white;
+  }
+  .date{
+    color: white;
+  }
+  form{
+    background-color: white;
+    opacity: 0.8;
+    padding: 30px;
+    width: fit-content;
+    border-radius: 7%;
+  }
+
+  .centerloginbox{
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  body{
+    background-image: url('https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
+<div class="container-fluid text-center">
+    <h1 class='display-3'>Check Out</h1>
+  </div>
+  <br>
+    <div class="container-fluid text-center justify-content-center align-items-center">
+      <span class="date">Enter check out time</span>
+    </div>
+    <br>
+    <!-- <div class="description">
+      Kristy is an art director living in New York.
+    </div> -->
+    <div class="centerloginbox">
+    <form action="{% url 'checkout' %}" method='POST'>
+      <div>
+      {%csrf_token%}
+      <label class="label">Visitor Email:</label>
+      <input type="email" name="email">
+        <br>
+      <label class="label">Check Out Time:</label>
+      <input type="time" name="checkout">
+    </div>
+    <br>
+    <div class="text-center">
+      <button type="Submit" class="ui black button">Submit</button>
+    </div>
+    <br>
+    <div class="text-center">
+        {% for mes in messages %}
+        {{mes}}
+        {% endfor %}
+        </div>
+    </form>
+    <div class="text-center">
+        <a href="{% url 'home' %}" class="btn btn-dark" role="button" aria-pressed="true">Home</a>
+      </div>
+  </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
