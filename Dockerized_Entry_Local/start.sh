@@ -2,5 +2,5 @@
 
 # Start Gunicorn processes
 echo Setting up docker containers
-docker-compose up -d
+sudo docker-compose up -d
 

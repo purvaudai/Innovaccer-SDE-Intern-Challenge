@@ -24,6 +24,18 @@ Go to [Twilio](https://www.twilio.com/).
 Login with Email[purvaudai99@gmail.com], password[TingooPingoo123].
 Now go visit [here](https://www.twilio.com/console/phone-numbers/verified) and add Host Phone No.
 I
+## Accounts Already Present in Database:
+### Admins:
+1. Username: admin <br>
+   Password: admin 
+
+### Hosts:
+1. Username: purvaudai <br>
+   Password: welcomep<br>
+   Email: purvaudai99@gmail.com
+2. Username: namant <br>
+   Password: welcomen <br>
+   Email: 17uec077@lnmiit.ac.in
 
 ## Setting up server
 Move to directory of your choice till the folder which has manage.py, this is the project root.
@@ -59,7 +71,7 @@ Enter user password, if prompted. (Since I do not know your docker configuration
  ## Visitor Check In
 
  1. Fill in details and click on go to meeting
- 
+
  <img src = "https://raw.githubusercontent.com/purvaudai/Innovaccer-SDE-Intern-Challenge/master/PicturesForREADME/7.png" width="500px">
 
  2. Host will now receive Email and SMS
