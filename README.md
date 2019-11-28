@@ -76,7 +76,7 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser
 ```
-7. Welcome to app. Now you have a empty database to begin populating.
+7. Welcome to app. Now you have a empty database to begin populating. Proceed to add new hosts by method below.
 
 # Using Web App
  ## Visit [localhost:8000](localhost:8000)
