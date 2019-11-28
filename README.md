@@ -66,20 +66,17 @@ docker exec -it c0c20a45003a /bin/bash
 ```
 4. Run
 ```bash
+python manage.py makemigrations
 ```
 5. Run
 ```bash
-python manage.py makemigrations
-```
-6. Run
-```bash
 python manage.py migrate
 ```
-7. Run, and add admin account.
+6. Run, and add admin account.
 ```bash
 python manage.py createsuperuser
 ```
-8. Welcome to app. Now you have a empty database to begin populating.
+7. Welcome to app. Now you have a empty database to begin populating.
 
 # Using Web App
  ## Visit [localhost:8000](localhost:8000)
