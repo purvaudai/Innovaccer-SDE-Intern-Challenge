@@ -9,6 +9,9 @@ Submission for Innovaccer Summer Internship 2020.
 3. Gunicorn Server
 4. Nginx for reverse proxy in third option
 
+## Prerequisites
+Ensure Python 3 is installed, and venv is working (normally is is installed along with Python3).
+
 ## Why are there three folders above?
 I have provided three different ways to access the program:
 1. Running it on local machine like most Django Application
