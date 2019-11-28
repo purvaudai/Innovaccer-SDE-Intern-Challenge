@@ -56,29 +56,29 @@ Enter user password, if prompted. (Since I do not know your docker configuration
 If you are using Docker version, you will need to do the following to start the app since the database will be empty on running the app for the first time on a new system, due to Postgre Docker Image, where persisted data is made with permissions of the originating docker build.
 
 1. Run 
-'''bash
+```bash
 docker ps
-'''
+```
 2. Obtain Container ID of dockerized_entry_local_web
 3. Run, after replacing correct Container ID
-'''bash
+```bash
 docker exec -it c0c20a45003a /bin/bash
-'''
+```
 4. Run
-'''bash
-'''
+```bash
+```
 5. Run
-'''bash
+```bash
 python manage.py makemigrations
-'''
+```
 6. Run
-'''bash
+```bash
 python manage.py migrate
-'''
+```
 7. Run, and add admin account.
-'''bash
+```bash
 python manage.py createsuperuser
-'''
+```
 8. Welcome to app. Now you have a empty database to begin populating.
 
 # Using Web App
