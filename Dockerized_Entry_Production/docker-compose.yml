@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:10.1-alpine
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data/
+      - postgredata:/var/lib/postgresql/data/
   web:
     build: .
     command: gunicorn Entry_Management_App.wsgi:application --bind 0.0.0.0:8000 --workers=3
@@ -25,5 +25,8 @@ services:
       - ./Entry_Management_App/static:/static
     depends_on:  # <-- wait for djangoapp to be "ready" before starting this service
       - web
+
+volumes:
+  postgredata:
 
 

@@ -11,6 +11,7 @@ Submission for Innovaccer Summer Internship 2020.
 
 ## Prerequisites
 Ensure Python 3 is installed, and venv is working (normally is is installed along with Python3).
+Also ensure docker and docker-compose is installed.
 
 ## Why are there three folders above?
 I have provided three different ways to access the program:
@@ -28,7 +29,8 @@ Go to [Twilio](https://www.twilio.com/).
 Login with Email[purvaudai99@gmail.com], password[TingooPingoo123].
 Now go visit [here](https://www.twilio.com/console/phone-numbers/verified) and add Host Phone No.
 
-## Accounts Already Present in Database:
+
+## Accounts Already Present in Database(In Non-dockerized Version):
 ### Admins:
 1. Username: admin <br>
    Password: admin 
@@ -50,6 +52,34 @@ Then, run,
 ./start.sh
 ```
 Enter user password, if prompted. (Since I do not know your docker configuration, I have set start.sh to use sudo for the dockerized projects.
+
+If you are using Docker version, you will need to do the following to start the app since the database will be empty on running the app for the first time on a new system, due to Postgre Docker Image, where persisted data is made with permissions of the originating docker build.
+
+1. Run 
+'''bash
+docker ps
+'''
+2. Obtain Container ID of dockerized_entry_local_web
+3. Run, after replacing correct Container ID
+'''bash
+docker exec -it c0c20a45003a /bin/bash
+'''
+4. Run
+'''bash
+'''
+5. Run
+'''bash
+python manage.py makemigrations
+'''
+6. Run
+'''bash
+python manage.py migrate
+'''
+7. Run, and add admin account.
+'''bash
+python manage.py createsuperuser
+'''
+8. Welcome to app. Now you have a empty database to begin populating.
 
 # Using Web App
  ## Visit [localhost:8000](localhost:8000)
